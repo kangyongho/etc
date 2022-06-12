@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>테트리스</title>
+  <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+  <div id="container">
+    <div id="board">
+      <canvas id="canvas" width="540" height="600"></canvas>
+    </div>
+    <div id="controller">
+      <ul>
+        <li onclick="move_left()">좌</li>
+        <li onclick="move_right()">우</li>
+        <li onclick="rotate()">회전</li>
+        <li onclick="move_down()" id="move_down">하강</li>
+      </ul>
+    </div>   
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="tetris.js"></script>
+  <script>
+    $(document).ready(function(){
+      initialize();
+      run_interval_flag = setInterval(play, 1000);
+    });
+    $(document).keydown(function( event ){
+      onKeyDown(event);		
+    });
+    $('#move_down').dblclick(function() {
+      move_bottom();
+    })
+  </script>
+</body>
+</html>

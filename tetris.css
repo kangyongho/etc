@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+#container {
+  width:600px;    /* 컨테이너의 너비 */
+  /*border:none;     테두리 없앰 */
+  margin:0 auto;   /* 화면 중앙에 배치 */
+}
+div {
+  /*border:1px dotted #222;  /* 테두리 */
+  padding:10px;  /* 패딩 */
+  margin:10px;  /* 마진 */
+}
+#board {
+  border:1px solid #222;  /* 테두리 */
+  margin-bottom: 0;
+}
+#controller {
+  border:1px solid #222;  /* 테두리 */
+  border-top: none;
+  padding-left: 5px;
+  margin-top: 0;
+}
+#canvas {
+  /*sborder:1px solid #222;  /* 테두리 */
+  margin-top: 1px;
+  clear: right;
+}
+ul { 
+  list-style: none; padding-left: 10px;
+  user-select: none;
+}
+ul li {
+  display: inline-block;
+  width: 60px;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+  border: 1px solid #222;
+  font-weight: bold;
+  background-color: beige;
+}
